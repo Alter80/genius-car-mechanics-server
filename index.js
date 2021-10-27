@@ -9,7 +9,7 @@ require('dotenv').config()
 const app = express();
 
 // third step: port
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // STEP 3.25: USE MIDDLEWARE using CORS, otherwise it will not receive data from React APP. 
 app.use(cors());
