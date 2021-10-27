@@ -86,6 +86,10 @@ app.get('/', (req, res) => {
     res.send('Running Genius Server');
 })
 
+app.get('/', (req, res) => {
+    res.send('Hello, check for heroku');
+})
+
 // FIFTH STEP:: App Listen server
 app.listen(port, () => {
     console.log('Running Genius Server on port no:', port);
@@ -95,3 +99,27 @@ app.listen(port, () => {
 
 
 // install dotenv to secure the dbadmin user and pass details
+
+
+/*
+one time:
+1. Heroku account open
+2. heroku software install
+
+every project do these:
+1. git init
+2. .gitignore(node_module, .env)
+3. push everything to git
+4. make sure you have this written in package.json: "start": "node index.js",
+    "start-dev": "nodemon index.js",
+5. Make sure: put process.env.PORT in front of your port number
+6. heroku login
+7. heroku create (only one time for a project)
+8. command: git push heroku main
+----
+
+update:
+1. save everything, check locally
+2. git add. git commit -m '', git push
+3. git push heroku main
+*/
